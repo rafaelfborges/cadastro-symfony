@@ -1,3 +1,7 @@
 #index:
 #    path: /
-#    controller: App\Controller\DefaultController::index
+#    controller: App\Controller\UsuarioController::index
+#
+#salvar:
+#    path: /salvar
+#    controller: App\Controller\UsuarioController::salvar
