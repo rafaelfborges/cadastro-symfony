@@ -5,6 +5,11 @@ namespace App\Controller\Api;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * Class UsuarioController
+ * @package App\Controller\Api
+ * @Route("/api/v1", name="api_v1_usuario_")
+ */
 class UsuarioController
 {
     /**
