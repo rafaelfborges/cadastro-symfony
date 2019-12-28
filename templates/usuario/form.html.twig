@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+{% endblock %}
+
+{% block title %}Cadastro de usuários{% endblock %}
+
+{% block topo %}
+    <div class="topo">
+        <img src="{{ asset('img/logo-digital.png') }}" alt="Digital Innovation One" />
+    </div>
+{% endblock %}
+
+{% block body %}
+    <form method="POST" action="{{ path('web_usuario_salvar') }}">
+        <input type="text" name="nome" placeholder="Nome" />
+        <input type="email" name="email" placeholder="E-mail" />
+        <button type="submit">Salvar</button>
+    </form>
+{% endblock %}
