@@ -2,11 +2,26 @@
 
 namespace App\Controller;
 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController
 {
-    public function index(){
-        return new Response("Digital", 200);
+    /**
+     * @Route("/", methods={"POST", "GET"})
+     * @param Request $request
+     * @return Response
+     */
+    public function index(Request $request): Response{
+        $response = new Response();
+        $response->setContent(json_encode(
+           [
+               "recebido" => $request->get('nome')
+           ]
+        ));
+        $response->setStatusCode(200);
+
+        return $response;
     }
 }
